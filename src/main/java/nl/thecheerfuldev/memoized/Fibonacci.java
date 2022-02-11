@@ -5,14 +5,11 @@ import java.util.Map;
 
 public class Fibonacci {
 
-    public long fibonacci(long n) {
-        if (n <= 0) {
-            return 0;
+    public long fib(long n) {
+        if (n < 2) {
+            return n;
         }
-        if (n == 1 || n == 2) {
-            return 1;
-        }
-        return fibonacci(n - 1) + fibonacci(n - 2);
+        return fib(n - 1) + fib(n - 2);
     }
 
     public long fibonacciMemoized(long n) {
@@ -21,14 +18,11 @@ public class Fibonacci {
     }
 
     private long fibonacciMemoized(long n, Map<Long, Long> calculated) {
-        if (n <= 0) {
-            return 0;
+        if (n < 2) {
+            return n;
         }
         if (calculated.containsKey(n)) {
             return calculated.get(n);
-        }
-        if (n == 1 || n == 2) {
-            return 1;
         }
         calculated.put(n, fibonacciMemoized(n - 1, calculated) + fibonacciMemoized(n - 2, calculated));
         return calculated.get(n);
