@@ -3,14 +3,7 @@ package nl.thecheerfuldev.memoized;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Fibonacci {
-
-    public long fib(long n) {
-        if (n < 2) {
-            return n;
-        }
-        return fib(n - 1) + fib(n - 2);
-    }
+public class FibonacciMemoized {
 
     public long fibonacciMemoized(long n) {
         Map<Long, Long> calculated = new HashMap<>();

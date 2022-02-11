@@ -1,5 +1,6 @@
 package nl.thecheerfuldev.memoized;
 
+import nl.thecheerfuldev.recursive.Fibonacci;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +22,6 @@ class FibonacciTest {
         assertEquals(2, sut.fib(3));
         assertEquals(3, sut.fib(4));
         assertEquals(5, sut.fib(5));
-//        assertEquals(3736710778780434371L, sut.fib(100));
-        assertEquals(3736710778780434371L, sut.fibonacciMemoized(100));
+        assertEquals(3736710778780434371L, sut.fib(100));
     }
 }
