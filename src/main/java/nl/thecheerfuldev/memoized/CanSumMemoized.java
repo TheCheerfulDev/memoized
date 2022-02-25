@@ -3,23 +3,7 @@ package nl.thecheerfuldev.memoized;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CanSum {
-
-    public boolean canSum(int targetSum, int[] numbers) {
-        if (targetSum == 0) {
-            return true;
-        }
-        if (targetSum < 0) {
-            return false;
-        }
-
-        for (int number : numbers) {
-            if (canSum(targetSum - number, numbers)) {
-                return true;
-            }
-        }
-        return false;
-    }
+public class CanSumMemoized {
 
     public boolean canSumMemoized(int targetSum, int[] numbers) {
         return canSumMemoized(targetSum, numbers, new HashMap<>());
@@ -44,6 +28,6 @@ public class CanSum {
             }
         }
         return false;
-
     }
+
 }

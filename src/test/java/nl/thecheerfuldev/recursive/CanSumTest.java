@@ -1,4 +1,4 @@
-package nl.thecheerfuldev.memoized;
+package nl.thecheerfuldev.recursive;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ class CanSumTest {
 
     @BeforeEach
     void setUp() {
-        sut = new CanSum();
+        this.sut = new CanSum();
     }
 
     @Test
@@ -30,8 +30,4 @@ class CanSumTest {
         assertFalse(sut.canSum(300, new int[]{7, 14}));
     }
 
-    @Test
-    void canSumMemoized() {
-        assertFalse(sut.canSumMemoized(3000, new int[]{7, 14}));
-    }
 }

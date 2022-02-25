@@ -1,4 +1,4 @@
-package nl.thecheerfuldev.memoized;
+package nl.thecheerfuldev.recursive;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,13 +9,13 @@ class HowSumTest {
 
     @BeforeEach
     void init() {
-        sut = new HowSum();
+        this.sut = new HowSum();
     }
 
     @Test
     void howSumTest() {
 
-        int[] firstArray = {13,7};
+        int[] firstArray = {13, 7};
 
         System.out.println(sut.howSum(300, firstArray));
 

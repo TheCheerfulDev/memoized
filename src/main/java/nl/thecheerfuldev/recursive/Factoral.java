@@ -1,4 +1,4 @@
-package nl.thecheerfuldev.memoized;
+package nl.thecheerfuldev.recursive;
 
 public class Factoral {
 

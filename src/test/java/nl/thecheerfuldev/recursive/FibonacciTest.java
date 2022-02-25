@@ -1,6 +1,5 @@
-package nl.thecheerfuldev.memoized;
+package nl.thecheerfuldev.recursive;
 
-import nl.thecheerfuldev.recursive.Fibonacci;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +11,7 @@ class FibonacciTest {
 
     @BeforeEach
     void setUp() {
-        sut = new Fibonacci();
+        this.sut = new Fibonacci();
     }
 
     @Test
@@ -22,6 +21,7 @@ class FibonacciTest {
         assertEquals(2, sut.fib(3));
         assertEquals(3, sut.fib(4));
         assertEquals(5, sut.fib(5));
+        assertEquals(13, sut.fib(7));
         assertEquals(3736710778780434371L, sut.fib(100));
     }
 }
